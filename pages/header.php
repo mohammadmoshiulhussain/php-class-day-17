@@ -18,6 +18,7 @@
             <li><a href="action.php?pages=password-reset" class="nav-link text-white">Password Reset</a></li>
             <li><a href="action.php?pages=blog" class="nav-link text-white">All Blog</a></li>
             <li><a href="action.php?pages=product" class="nav-link text-white">All Product</a></li>
+            <li><a href="?pages=pattern" class="nav-link text-white">File Upload</a></li>
         </ul>
     </div>
 </nav>

@@ -3,6 +3,8 @@
 require_once 'vendor/autoload.php';
 use App\classes\Home;
 use App\classes\Product;
+use App\classes\Pattern;
+use App\classes\Fileupload;
 
 if (isset($_GET['pages']))
 {
@@ -22,4 +24,21 @@ if (isset($_GET['pages']))
         $result = $product->getAllProductById($_GET['id']);
         include 'pages/detail.php';
     }
+
+    elseif ($_GET['pages'] == 'file-upload')
+    {
+        include 'pages/file-upload.php';
+    }
+
+    elseif ($_GET['pages'] == 'pattern')
+    {
+        include 'pages/pattern.php';
+    }
+
+    elseif (isset($_POST['img_btn']))
+    {
+        $fileupload  = new Fileupload($_POST);
+        $fileupload->index();
+    }
 }
+
